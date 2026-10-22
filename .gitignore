@@ -1,0 +1,8 @@
+# Local build outputs
+/dist/
+/build/
+*.log
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db

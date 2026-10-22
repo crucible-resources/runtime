@@ -1,0 +1,14 @@
+version: 0
+
+resource:
+  type: runtime
+  name: crucible/runtime
+  description: Debian 12 (Bookworm) runtime.
+  version: 0.1.0
+
+stages:
+  - name: base
+    steps:
+      - run: apt-get update
+      - run: DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates curl tzdata
+      - run: rm -rf /var/lib/apt/lists/*
